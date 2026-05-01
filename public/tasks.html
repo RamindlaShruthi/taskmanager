@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks | Team Task Manager</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">Team Task Manager</a>
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/tasks.html">Tasks</a>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <h1>Task management</h1>
+      <p>Admins assign work. Members update their own task status.</p>
+    </section>
+
+    <form class="panel admin-only" id="taskForm">
+      <h2>Create task</h2>
+      <label>Title
+        <input type="text" id="title" required>
+      </label>
+      <label>Description
+        <textarea id="description" rows="3"></textarea>
+      </label>
+      <div class="form-row">
+        <label>Project
+          <select id="projectId" required></select>
+        </label>
+        <label>Assign to
+          <select id="assignedTo" required></select>
+        </label>
+        <label>Due date
+          <input type="date" id="dueDate" required>
+        </label>
+      </div>
+      <button class="button" type="submit">Create task</button>
+    </form>
+
+    <section class="list" id="taskList"></section>
+    <p class="message" id="message"></p>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/tasks.js"></script>
+</body>
+</html>
