@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Team Task Manager</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">Team Task Manager</a>
+    <nav>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/tasks.html">Tasks</a>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <h1>Dashboard</h1>
+      <p id="welcomeText"></p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>Total tasks</span>
+        <strong id="totalTasks">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Completed</span>
+        <strong id="completedTasks">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Pending</span>
+        <strong id="pendingTasks">0</strong>
+      </article>
+      <article class="stat-card danger">
+        <span>Overdue</span>
+        <strong id="overdueTasks">0</strong>
+      </article>
+    </section>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

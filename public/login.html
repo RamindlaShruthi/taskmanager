@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Team Task Manager</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <form class="auth-panel" id="loginForm">
+      <h1>Login</h1>
+      <label>Email
+        <input type="email" id="email" required>
+      </label>
+      <label>Password
+        <input type="password" id="password" required>
+      </label>
+      <button class="button" type="submit">Login</button>
+      <p class="message" id="message"></p>
+      <p>New here? <a href="/signup.html">Create an account</a></p>
+    </form>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
